@@ -1,5 +1,6 @@
 from flask import Flask, render_template
 app = Flask(__name__)
+import os
 
 @app.route("/", methods=["GET", "POST"])
 def index_html():
@@ -9,5 +10,4 @@ def index_html():
 ## 起動
 if __name__ == "__main__":
 	#bertの初期化
-	
-    app.run(debug=True)
+	app.run(debug=True, host="0.0.0.0", port=int(os.environ.get("PORT", 5000)))
