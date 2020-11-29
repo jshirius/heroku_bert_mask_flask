@@ -1,1 +1,3 @@
-web: gunicorn bert-mask-app.wsgi --log-file -
+web: gunicorn bert-mask-app:app --log-file -
+
+
