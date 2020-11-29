@@ -1,3 +1,3 @@
-web: gunicorn bert-mask-app:app --log-file -
+web: gunicorn app:app --log-file -
 
 
